@@ -28,7 +28,7 @@ A API é construída seguindo os conceitos **REST**, utiliza o formato **JSON** 
 
 1.  **Clonar o Repositório:**
     ```bash
-    git clone [https://github.com/evertonazevedodev/ToolsChallenge.git]
+    git clone https://github.com/evertonazevedodev/ToolsChallenge.git
     cd ToolsChallenge
     ```
 
