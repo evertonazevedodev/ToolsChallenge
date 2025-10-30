@@ -1,0 +1,28 @@
+spring:
+  # 1. Configuração da Aplicação
+  application:
+    name: tools-challenge
+
+  # Configuração do Banco de Dados H2
+  datasource:
+    url: jdbc:h2:mem:toolsdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  # Configuração do console do H2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # Configuração do JPA/Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# 2. Configuração do Servidor Web (Tomcat Embutido)
+server:
+  port: 8080
