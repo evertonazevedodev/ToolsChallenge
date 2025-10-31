@@ -11,17 +11,16 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Global Exception Handler (ControllerAdvice)
+ * Global Exception Handler
  * Responsável por interceptar exceções lançadas por Controllers ou Serviços
  * e formatar a resposta HTTP de erro de maneira padronizada e legível.
+ *
+ *  * @author Everton
+ *  * @version 1.0
  */
 @ControllerAdvice
 public class RestExceptionHandler {
 
-    /**
-     * Trata exceções do tipo ResponseStatusException (lançadas nos services).
-     * Garante que a mensagem de erro personalizada seja exibida no JSON.
-     */
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<Object> handleResponseStatusException(ResponseStatusException ex) {
 

@@ -8,20 +8,24 @@ import com.toolschallenge.repository.TransacaoRepository;
 import com.toolschallenge.service.PagamentoService;
 import com.toolschallenge.util.MapperUtils;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Random;
-
-//public class PagamentoServiceImpl implements PagamentoService {
-//    @Override
-//    public TransacaoResponseDTO realizarPagamento(TransacaoRequestDTO requestDTO) {
-//        return null;
-//    }
-//}
+/**
+ * Implementação do serviço responsável pelo processamento de pagamentos.
+ * <p>
+ * Esta classe contém a lógica para realizar uma transação de pagamento,
+ * incluindo a verificação de existência do ID da transação, simulação
+ * do status da transação, geração de NSU e código de autorização,
+ * e o salvamento da transação no repositório.
+ * </p>
+ *
+ * @author Everton
+ * @version 1.0
+ */
 
 @Service
 @RequiredArgsConstructor

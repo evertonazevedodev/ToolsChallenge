@@ -6,7 +6,6 @@ import com.toolschallenge.service.ConsultaService;
 import com.toolschallenge.service.EstornoService;
 import com.toolschallenge.service.PagamentoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +21,9 @@ import java.util.List;
  *     <li>Estorno de transações</li>
  *     <li>Consulta de transações (por ID ou todas)</li>
  * </ul>
+ *
+ *  * @author Everton
+ *  * @version 1.0
  */
 @RequiredArgsConstructor
 @RestController

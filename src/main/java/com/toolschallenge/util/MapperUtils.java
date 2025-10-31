@@ -9,6 +9,18 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Classe utilitária para mapeamento entre DTOs e entidades.
+ * <p>
+ * Esta classe fornece métodos para converter dados de requisição
+ * em entidades do modelo de domínio e vice-versa, facilitando
+ * a transferência de dados entre diferentes camadas da aplicação.
+ * </p>
+ *
+ *  * @author Everton
+ *  * @version 1.0
+ */
+
 @Component
 public class MapperUtils {
 
