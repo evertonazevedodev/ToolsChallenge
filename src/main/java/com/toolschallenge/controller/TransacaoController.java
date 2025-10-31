@@ -5,6 +5,7 @@ import com.toolschallenge.dto.TransacaoResponseDTO;
 import com.toolschallenge.service.ConsultaService;
 import com.toolschallenge.service.EstornoService;
 import com.toolschallenge.service.PagamentoService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,21 +23,13 @@ import java.util.List;
  *     <li>Consulta de transações (por ID ou todas)</li>
  * </ul>
  */
+@RequiredArgsConstructor
 @RestController
 public class TransacaoController {
 
     private final PagamentoService pagamentoService;
     private final EstornoService estornoService;
     private final ConsultaService consultaService;
-
-    @Autowired
-    public TransacaoController(PagamentoService pagamentoService,
-                               EstornoService estornoService,
-                               ConsultaService consultaService) {
-        this.pagamentoService = pagamentoService;
-        this.estornoService = estornoService;
-        this.consultaService = consultaService;
-    }
 
     /**
      * Endpoint responsável por processar uma nova transação de pagamento.
@@ -56,7 +49,7 @@ public class TransacaoController {
      * @param id identificador único da transação a ser estornada
      * @return {@link ResponseEntity} contendo os dados da transação após o estorno
      */
-    @PostMapping("/estorno/{id}")
+    @PatchMapping("/estorno/{id}")
     public ResponseEntity<TransacaoResponseDTO> realizarEstorno(@PathVariable String id) {
         TransacaoResponseDTO response = estornoService.realizarEstorno(id);
         return ResponseEntity.ok(response);

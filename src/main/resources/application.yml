@@ -21,6 +21,9 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.format_sql: true
     show-sql: true
 
 # 2. Configuração do Servidor Web (Tomcat Embutido)
