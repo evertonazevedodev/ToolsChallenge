@@ -2,8 +2,12 @@ package com.toolschallenge.util;
 
 import com.toolschallenge.dto.TransacaoRequestDTO;
 import com.toolschallenge.dto.TransacaoResponseDTO;
+import com.toolschallenge.dto.enums.TipoPagamento;
+import com.toolschallenge.model.FormaPagamento;
 import com.toolschallenge.model.Transacao;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
